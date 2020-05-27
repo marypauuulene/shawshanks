@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<head>
+ 
+<!--
+ 
+    MEDIA I (updated 21/7/18)
+        by alydae
+       
+            - do not steal any part of this code
+            - do not aeven TOUCH the credit 
+            - direct questions to enchantedthemes.tumblr.com 
+           
+    thank you for using!!!
+ 
+-->
+ 
+<title>bookshelf</title>
+<link rel="shortcut icon" href="https://66.media.tumblr.com/3da24e92e1293c433df3b3ba864afa79/f144357d27b2bb9a-51/s128x128u_c1/83276bd2dbee083cf48b10bf06dd7766b9affa73.jpg">
+ 
+<!-- scripts - DO NOT TOUCH -->
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script src="https://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+<script>
+   (function($){
+       $(document).ready(function(){
+           $("[title]").style_my_tooltips({
+               tip_follows_cursor:true,
+               tip_delay_time:200,
+               tip_fade_speed:300
+           }
+               );
+       });
+   })(jQuery);
+</script>
+ 
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script>
+$(window).load(function () {
+    $('#content').masonry({
+        itemSelector : ".media",
+        horizontalOrder: true
+    });
+});
+</script>
+ 
+<!-- custom font -->
+ 
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic|Karla:300,400,600,400italic' rel='stylesheet' type='text/css'>
+ 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ 
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+ 
+ 
+<style type="text/css">
+ 
+@keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+ 
+@-moz-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+ 
+@-webkit-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+ 
+@-ms-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+ 
+@-o-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+ 
+/*-- selection --*/
+ 
+::-moz-selection { background:#eee; color:#222; }
+::selection { background:#eee; color:#222; }
+ 
+/*-- scrollbar --*/
+ 
+::-webkit-scrollbar {  
+    width:1px;  
+    height:2px;
+}  
+   
+::-webkit-scrollbar-thumb { background-color:#aaa; } /* scrollbar colour */
+ 
+/*-- tooltips --*/
+ 
+#s-m-t-tooltip {
+    color:#666;
+    background-color:#fafafa;
+    font-size:8px;
+    font-family:'Open Sans', helvetica, sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align:center;
+    position:absolute;
+    padding:0px 5px 0px 5px;
+    margin-top:30px;
+    border:1px solid #eee;
+    z-index:9999;
+}
+ 
+/*-- tumblr controls --*/
+ 
+.tmblr-iframe, .iframe-controls–desktop {
+    display:none !important;
+}
+ 
+/*-- general customisation --*/
+ 
+body {
+    color:#666; /* text colour */
+    background-color:#fff; /* background colour */
+    font-style:normal;
+    font-family:'Open Sans', helvetica, sans-serif;
+    font-size:10px;
+    font-weight:400;
+    text-decoration:none;
+    line-height:180%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s;
+    animation: fadein 1.5s;
+}
+ 
+a {
+    text-decoration:none;
+    color:#444; /* links colour */
+    transition-duration: 0.6s;  
+    -moz-transition-duration: 0.6s;  
+    -webkit-transition-duration: 0.6s;  
+    -o-transition-duration: 0.6s
+}  
+   
+a:hover {
+    color:#bad1e7; /* links hover colour */
+    cursor:pointer;
+    transition-duration: 0.6s;  
+    -moz-transition-duration: 0.6s;  
+    -webkit-transition-duration: 0.6s;  
+    -o-transition-duration: 0.6s
+}
+ 
+b, strong { font-weight:700; color:#444; }
+i, em { font-style:italic; }
+ 
+h1, h2, h3 {
+    margin:0;
+    font-size:10px;
+    line-height:150%;
+}
+ 
+/*-- header --*/
+ 
+#header {
+    position:fixed;
+    margin:0;
+    top:0;
+    left:0;
+    z-index:9999;
+}
+ 
+.info {
+    margin:0;
+    top:0;
+    left:0;
+    width:100vw;
+    height:50px;
+    padding:15px;
+    background:#fff; /* header background colour */
+}
+ 
+.info img {
+    position:relative;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+}
+ 
+.t {
+    position:relative;
+    margin:-50px 70px;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#000; /* title colour */
+}
+ 
+.l { position:absolute; margin:55px 70px; }
+.l a { margin-right:10px; }
+.l i { margin-right:5px; }
+ 
+.d {
+    position:relative;
+    float:right;
+    text-align:right;
+    right:15px;
+    margin:15px;
+    width:350px;
+    line-height:160%;
+    max-height:50px;
+    overflow:auto;
+    padding-right:10px;
+}
+ 
+/*--filters--*/
+ 
+#sort {
+    position:relative;
+    width:100vw;
+    top:0;
+    left:0;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+    background:#fafafa; /* filters background colour */
+    border:1px solid #eee; /* filters border colour */
+}
+ 
+#sort ul {
+    display:block;
+    list-style:none;
+    padding-left:0px;
+    margin-top:0;
+    margin-bottom:0;
+}
+ 
+#sort a {
+    display:inline;
+    margin-right:10px;
+}
+ 
+#sort li { display:inline; list-style:none; }
+#sort li a.selected { font-weight:600; color:#222; } /* selected filter colour */
+#sort li:before { content:''; margin-right:2px; }
+ 
+/*-- media --*/
+ 
+#content {
+    height:100%;
+    position:relative;
+    margin:200px auto 100px auto;
+    width:calc((133px + 30px + 2px) * 6);
+    /* ((media width + 2*margin + 2*border) * number of columns) */
+}
+ 
+.media {
+    margin:15px;
+    height:auto;
+    width:133px;
+    float:left;
+    background-color:#fafafa; /* media background colour */
+    border:1px solid #eee; /* media border colour */
+}
+ 
+.media img {
+    width:133px;
+    height:200px;
+    margin-bottom:-5px;
+}
+ 
+.media h1 {
+    padding:10px 10px 5px;
+    text-transform:uppercase;
+    text-align:left;
+    font-weight:600;
+    font-size:10.5px;
+    color:#222; /* media title colour */
+}
+ 
+.media h2 {
+    width:calc((133px/2) - 10px);
+    padding-left:10px;
+    padding-bottom:10px;
+    text-transform:lowercase;
+    text-align:left;
+    font-weight:400;
+    font-style:italic;
+    color:#444; /* media subtitle colour */
+}
+ 
+.media h3 {
+    width:calc((133px/2) - 10px);
+    float:right;
+    margin-top:-25px;
+    padding-right:10px;
+    text-align:right;
+    font-weight:400;
+}
+ 
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:133px;
+    height:200px;
+    opacity:0;
+    background:rgba(255,255,255,0.95);
+    z-index:99;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    transition:0.6s ease;
+    -o-transition:0.6s ease;
+    -moz-transition:0.6s ease;
+    -webkit-transition:0.6s ease;
+}
+ 
+.media:hover .overlay { opacity:1; }
+ 
+.desc {
+    position:relative;
+    top:0;
+    left:0;
+    width:113px;
+    max-height:180px;
+    margin:5px;
+    padding:5px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+ 
+/*-- credit - DO NOT TOUCH --*/
+ 
+.credit a {
+    bottom:15px;
+    right:20px;
+    position:fixed;
+    text-transform:uppercase;
+}
+ 
+</style>
+</head>
+ 
+ 
+<body> 
+  
+<div id="header">
+ 
+<div class="info">
+    <!-- the default is your icon. if you want to change it, remove {PortraitURL-128} and replace it with the image url of the one you want. -->
+    <img src="https://66.media.tumblr.com/6ca65da95805ca8188beef828b16ba82/8cff39a0ba9a2644-7b/s250x400/972f0278c967ce73a962704bf7decd3509641b14.png"/> 
+    <div class="t">bookshelf</div><!-- title -->
+    <div class="l">
+    <!-- these are your header links. feel free to add more. to change the icon, go to https://fontawesome.com/icons. -->
+        <a href="https://behind-the-seas.tumblr.com"><i class="fas fa-home"></i>home</a>
+        <a href="https://behind-the-seas.tumblr.com/ask" target="_blank"><i class="fas fa-envelope"></i>suggest</a>
+  
+<!--        <a href="/"><i class="fas fa-heart"></i>link</a>  -->
+<!--        <a href="/"><i class="fas fa-bars"></i>link</a> -->
+        
+    </div>
+    <!-- delete this section if you don't want a description -->
+<!--    <div class="d">
+        this page can be used for books, movies, tv shows, fic recs etc.
+        <br>you can filter by anything you like!
+        <br>there are instructions to delete this description, which will automatically scroll, if you don't want it. 
+    </div> -->
+    <!-- up to here! -->
+</div>
+ 
+<!-- HOW TO CUSTOMISE THE FILTERS
+ 
+template for new filter groups:
+    <ul class="filter option-set" data-filter-group="group1">
+    <b>category:</b>&nbsp;&nbsp;&nbsp;
+        <li><a href="#" data-filter-value="" class="selected">all</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+    </ul>
+   
+template for new filters:
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+ 
+in order to make your filters match your books/tv shows/fic/whatever, you only need to change the '.filter' and 'filter name' part. the 'category' line is optional.
+for example, if I wanted to make my media filter by favourites only, my code would look like this
+    <li><a href="#" data-filter-value=".fave">favourites</a></li>
+note the areas where it's been changed.
+ 
+it is essential that you do not change any other part, including the 'exclusive' in the first filter group, as well as the first filter in every group.
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+ 
+-->
+ 
+<div id="sort">
+    <ul class="filter option-set exclusive" data-filter-group="group1">
+    <b>category:</b>&nbsp;&nbsp;&nbsp;
+        <li><a href="#" data-filter-value="" class="selected">all</a></li>
+        <li>•</li>
+        <li><a href="#" data-filter-value=".rom">romance</a></li>
+         <li>•</li>
+        <li><a href="#" data-filter-value=".ya">young adult</a></li>
+         <li>•</li>
+        <li><a href="#" data-filter-value=".adv">adventure</a></li>
+        <li>•</li>
+        <li><a href="#" data-filter-value=".real">realism</a></li>
+        <li>•</li>
+        <li><a href="#" data-filter-value=".classix">classic</a></li>
+    </ul>
+  
+<!--    <ul class="filter option-set" data-filter-group="group2">
+    <b>category:</b>&nbsp;&nbsp;&nbsp;
+        <li><a href="#" data-filter-value="" class="selected">all</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+    </ul> -->
+    
+</div>
+ 
+</div><!-- end header -->
+ 
+ 
+<div id="content" class="clearfix">
+ 
+<!-- HOW TO ADD FILTERS TO EACH BOX
+ 
+template:
+<div class="media">
+    <img src=""/>
+    <h1>title</h1>
+    <h2>author</h2>
+    <h3><a href="">link</a></h3>
+    <div class="overlay">
+        <div class="desc">desc</div>
+    </div>
+</div>
+ 
+to add the filters, add the same name that you used above in the '.filter' but without the dot in front. you can add as many as you want but the 'media' in the beginning MUST stay there.
+ 
+for example, if you wanted to have the filters 'fave' and 'new' together for one box, the filters should look like this
+    <div class="media fave new">
+note how media is still there in front.
+ 
+if you do not want the text on hover, just delete these lines from the book/tv show/fic/whatever in question.
+    <div class="overlay">
+        <div class="desc">desc</div>
+    </div>
+   
+if you do not want an image and overlay, delete these lines from the book/tv/show/fic/whatever in question
+    <img src=""/>
+    <div class="overlay">
+        <div class="desc">desc</div>
+    </div>
+ 
+-->
+ 
+ 
+<div class="media ya real">  
+    <img src="https://66.media.tumblr.com/f58572c19fdb7cb82e70c896bc86c8bf/3a10d25ae863c871-dc/s400x600/869e1f615d9aa330c575a40d7265a1c7e66cec2e.jpg"/>
+    <h1>Flipped</h1>
+    <h2>Wendelin Van Draanen</h2>
+    <!-- <h3><a href="">link</a></h3>  -->
+    <div class="overlay">
+        <div class="desc">A story of two youngsters whose diverse views of their relationship evolve over many years until those perspectives are "flipped."</div>
+    </div>
+</div>
+ 
+ 
+<div class="media rom">
+    <img src="https://66.media.tumblr.com/83c5ba844434bc0fe5e4079452efb0ee/3a10d25ae863c871-54/s400x600/dc2fa920be0d4d1051d3283a26eb21b204d11339.jpg"/>
+    <h1>The Spectacular Now</h1>
+    <h2>Tim Tharp</h2>
+    <!-- <h3><a href="">link</a></h3>  -->
+    <div class="overlay">
+        <div class="desc">Sutter, a popular party animal unexpectedly meets the introverted Aimee after waking up on a stranger's lawn. As Sutter deals with the problems in his life and Aimee plans for her future beyond school, an unexpected romance blossoms between them.</div>
+    </div>
+</div>
+ 
+ 
+<div class="media adv">
+    <img src="https://66.media.tumblr.com/fd6c8ac975cab843161118163866169f/3a10d25ae863c871-65/s250x400/f120acca67095548c80fc36ec33ac07834f4e640.jpg"/>
+    <h1>Harry Potter and the Prisoner of Azkaban</h1>
+    <h2>JK Rowling</h2>
+    <!-- <h3><a href="">link</a></h3>  -->
+    <div class="overlay">
+        <div class="desc">Harry Potter's third year at Hogwarts starts off badly when he learns deranged killer Sirius Black has escaped from Azkaban prison and is bent on murdering the teenage wizard.</div>
+    </div>
+</div>
+ 
+ 
+<div class="media rom">
+    <img src="https://66.media.tumblr.com/4682dbfd1feeec008b3e74b64ee3bb6e/3a10d25ae863c871-87/s250x400/39f32cf527ff1766822e8afef0ed4ca4b9734732.png"/>
+    <h1>Eleanor & Park</h1>
+    <h2>Rainbow Rowell</h2>
+    <!-- <h3><a href="">link</a></h3> -->
+    <div class="overlay">
+        <div class="desc">Eleanor and Park are two star-crossed teens living in 1980s Omaha, trying to get through their own struggles while figuring out the complicated matter of first love.</div>
+    </div>
+</div>
+ 
+ 
+<div class="media rom">
+    <img src="https://66.media.tumblr.com/b53fe5abc81e921dd63c7f05747db908/3a10d25ae863c871-a4/s250x400/cf27591f2c6b2d2bf442f2f1d97a865b5acacc04.png"/>
+    <h1>The Summer I Turned Pretty</h1>
+    <h2>Jenny Han</h2>
+    <!-- <h3><a href="">link</a></h3> -->
+    <div class="overlay">
+        <div class="desc">Every summer, being the only girl, she competes for her place among the boys' antics, fighting to get in a little trouble and be a little naughty. She lives for every summer to be reunited with Susannah Fisher, her mother's long-time best friend and her two sons at Cousins Beach.</div>
+    </div>
+</div>
+ 
+ 
+<div class="media real classix">
+    <img src="https://66.media.tumblr.com/c333a9a13129559b24092348f21ad728/3a10d25ae863c871-29/s400x600/85a49bfe4bd612ebfa6f98ddf729f4ba17505212.jpg"/>
+    <h1>The Great Gatsby</h1>
+    <h2>F Scott Fitzgerald</h2>
+    <!-- <h3><a href="">link</a></h3> -->
+    <div class="overlay">
+        <div class="desc">Nick, a would-be writer, moves in next-door to millionaire Jay Gatsby and becomes drawn into the captivating world of the wealthy and -- as he bears witness to their illusions and deceits -- pens a tale of impossible love, dreams, and tragedy.</div>
+    </div>
+</div>
+
+ 
+</div><!-- end content -->
+ 
+ 
+<!-- credit - DO NOT TOUCH -->
+ 
+<div class="credit">
+    <a href="https://enchantedthemes.tumblr.com" title="alydae">A.</a>
+</div>
+ 
+ 
+</body>
+ 
+<!-- scripts - DO NOT TOUCH -->
+ 
+<!-- combination filters by @magnusthemes -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+ 
+<script>
+$(document).ready(function() {
+ var $container = $("#content");
+ var filters = {};
+ var $grid = $container.isotope({
+   itemSelector: ".media",
+   percentPosition: false,
+   masonry: {
+    horizontalOrder: true
+   }
+ });
+ 
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+<!-- end filter scripts -->
+ 
+</html>
