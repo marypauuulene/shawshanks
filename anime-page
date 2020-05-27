@@ -15,7 +15,7 @@
 -->
  
 <title>anime recc</title>
-<link rel="shortcut icon" href="https://66.media.tumblr.com/7c803a2bcf6c6f937b2967b36e06f3f3/d9d3732a82f311f1-5b/s250x400/624646f42612f287493d62951ebf386d778da2dc.png">
+<link rel="shortcut icon" href="https://66.media.tumblr.com/68754e601a3908de411312925e45e2ed/3073855d6dad231b-77/s400x600/1480de9831f3fbacd2513b30359f7f5d28a0bffe.png">
  
 <!-- scripts - DO NOT TOUCH -->
  
@@ -48,6 +48,10 @@ $(window).load(function () {
 <!-- custom font -->
  
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic|Karla:300,400,600,400italic' rel='stylesheet' type='text/css'>
+ 
+<!-- I added this font xpau --> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam">
  
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
  
@@ -125,7 +129,7 @@ body {
     background-color:#fff; /* background colour */
     font-style:normal;
     font-family:'Open Sans', helvetica, sans-serif;
-    font-size:12px;
+    font-size:11px;
     font-weight:400;
     text-decoration:none;
     line-height:180%;
@@ -192,12 +196,15 @@ h1, h2, h3 {
     border-radius:50%;
 }
  
+/* this is the class for the title  xpau*/ 
 .t {
     position:relative;
     margin:-50px 70px;
     text-transform:uppercase;
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
+/*  font-family: Walter Turncoat; */
+    font-family: Roboto Slab; /* custom title font, with matching code at the beginning*/
     letter-spacing:1px;
     color:#000; /* title colour */
 }
@@ -220,7 +227,8 @@ h1, h2, h3 {
 }
  
 /*--filters--*/
- 
+
+/* class for category  xpau*/
 #sort {
     position:relative;
     width:100vw;
@@ -228,6 +236,10 @@ h1, h2, h3 {
     left:0;
     padding-top:10px;
     padding-bottom:10px;
+/*  font-family: Kalam; */
+    font-size:12px;
+/*  font-family: Walter Turncoat; 
+    font-size:14px; default size is 12 */
     text-align:center;
     background:#fafafa; /* filters background colour */
     border:1px solid #eee; /* filters border colour */
@@ -240,7 +252,7 @@ h1, h2, h3 {
     margin-top:0;
     margin-bottom:0;
 }
- 
+  
 #sort a {
     display:inline;
     margin-right:10px;
@@ -258,6 +270,7 @@ h1, h2, h3 {
     margin:200px auto 100px auto;
     width:calc((300px + 40px + 2px) * 3);
     /* ((media width + 2*margin + 2*border) * number of columns) */
+/*  font-size:8px;  */
 }
  
 .media {
@@ -272,15 +285,17 @@ h1, h2, h3 {
 .media img {
     width:300px;
     height:200px;
-    margin-bottom:-5px;
+    margin-bottom:-5px; 
 }
  
+/* this class is for the anime title */ 
 .media h1 {
     padding:10px 10px 5px;
     text-transform:uppercase;
     text-align:left;
     font-weight:600;
-    font-size:14px;
+    font-size:18px;
+    font-family: Kalam;
     color:#222; /* media title colour */
 }
  
@@ -293,6 +308,7 @@ h1, h2, h3 {
     text-align:left;
     font-weight:400;
     font-style:italic;
+    font-size:12px;
     color:#444; /* media subtitle colour */
 }
  
@@ -355,11 +371,11 @@ h1, h2, h3 {
  
 <div class="info">
     <!-- the default is your icon. if you want to change it, remove {PortraitURL-128} and replace it with the image url of the one you want. -->
-    <img src="https://66.media.tumblr.com/99fbc95f84ee4b709a5ecc99c3873616/d9d3732a82f311f1-31/s250x400/b421bc3e6ca0e23498e58cfe01af6f708e7f1bb0.png"/> 
+    <img src="https://66.media.tumblr.com/87547b832f8dd04f95771973ae508433/3073855d6dad231b-f6/s250x400/6c41e36c16e083baa2867ff59ed744dac92d16ff.png"/> 
     <div class="t">anime recc</div><!-- title -->
     <div class="l">
     <!-- these are your header links. feel free to add more. to change the icon, go to https://fontawesome.com/icons. -->
-        <a href=""><i class="fas fa-home"></i>home</a>
+        <a href="/"><i class="fas fa-home"></i>home</a>
         <a href="https://behind-the-seas.tumblr.com/ask" target="_blank"><i class="fas fa-envelope"></i>suggest</a>
   
         <a href="/manga" target="_blank"><i class="fas fa-star"></i>manga</a> 
@@ -404,15 +420,17 @@ it is essential that you do not change any other part, including the 'exclusive'
         <li><a href="#" data-filter-value="" class="selected">all</a></li>
         <li>•</li>
         <li><a href="#" data-filter-value=".rom">romance</a></li>
-         <li>•</li>
-        <li><a href="#" data-filter-value=".adv">adventure</a></li>
         <li>•</li>
         <li><a href="#" data-filter-value=".slice">slice of life</a></li>
         <li>•</li>
         <li><a href="#" data-filter-value=".comedy">comedy</a></li>
         <li>•</li>
-        <li><a href="#" data-filter-value=".psych">psychological thriller</a></li>
-    </ul>
+    <li><a href="#" data-filter-value=".psych">psychological thriller</a></li>
+    <br>
+    <li><a href="#" data-filter-value=".food">food</a></li>
+    <li>•</li>
+    <li><a href="#" data-filter-value=".sports">sports</a></li>
+    </ul> 
   
 <!--    <ul class="filter option-set" data-filter-group="group2">
     <b>category:</b>&nbsp;&nbsp;&nbsp;
@@ -473,39 +491,63 @@ if you do not want an image and overlay, delete these lines from the book/tv/sho
 </div>
  
  
-<div class="media rom">
-    <img src="https://66.media.tumblr.com/791dda5d981448ed41aa988bb5c350a6/ebf1461c30213764-6a/s400x600/6ab69efe9da4e1b4fe2c2ffdf3bc348b470d7f78.jpg"/>
-    <h1>Bokura Ga Ita</h1>
-    <h2>Yuuki Obata</h2>
+<div class="media comedy food">
+    <img src="https://66.media.tumblr.com/a265cf4085cae6e4e4bb1495620d977a/ad52673be0efc24c-64/s400x600/e675c898010e347db389ff9598f2b28529fbb8f2.jpg"/>
+    <h1>Yakitate!! Japan</h1>
+    <h2>Takashi Hashiguchi</h2>
     <!-- <h3><a href="">link</a></h3>  -->
     <div class="overlay">
-        <div class="desc">Nana Takahashi isn’t a fan of high school romance. She doesn’t put too much effort into finding a boyfriend and pays no attention to dating. Things change for her one day when she becomes classmates with Yano Motoharu.</div>
+        <div class="desc">Kazuma Azuma, the boy with solar hands, is on his quest to create the ultimate "Ja-pan", a national bread for Japan.</div>
     </div>
 </div>
  
+<!-- THREE -->
  
-<div class="media rom">
-    <img src="https://66.media.tumblr.com/ee4bea351f61ee3a92bee26c5b09d84e/ebf1461c30213764-1c/s400x600/7a31bd6ffc6d8fb493a979c44368123077e17160.jpg"/>
-    <h1>Strobe Edge</h1>
-    <h2>Io Sakisaka</h2>
+<div class="media sports">
+    <img src="https://66.media.tumblr.com/f8f836124aedbd36b8020dcd9f5f0375/ad52673be0efc24c-d4/s540x810/4f39bd6b8a80fe3b8d8dd238d7c1f0d52d6b0016.jpg"/>
+    <h1>Yuri!!! on Ice</h1>
+    <h2>Sayo Yamamoto, Mitsurō Kubo</h2>
     <!-- <h3><a href="">link</a></h3>  -->
     <div class="overlay">
-        <div class="desc">Ninako is a high school student who slowly manages to get closer to the high school sweetheart, Ren. Problem is that Ren is in another relationship, and there is another student at the school who likes Ninako. </div>
+        <div class="desc">After a crushing defeat in the Grand Prix Final and other competition losses, 23-year-old Japanese figure skater Yuri Katsuki develops mixed feelings about skating and puts his career on hold; returning to his hometown of Hasetsu in Kyushu.</div>
     </div>
 </div>
  
+<!-- FOUR --> 
  
-<div class="media rom">
-    <img src="https://66.media.tumblr.com/9d06756c6503dfb2bb0ef3cf7c0cf205/ebf1461c30213764-94/s400x600/cb6d4d93539837564bb9d5004d74205c4196daf6.jpg"/>
-    <h1>Dengeki Daisy</h1>
-    <h2>Kyousuke Motomi</h2>
+<div class="media rom comedy">
+    <img src="https://66.media.tumblr.com/476fce391040cc9e81589e9c26b69de5/ad52673be0efc24c-52/s540x810/7487671e29416363c688bfa24cdc8eef27ab7bd4.jpg"/>
+    <h1>Skip Beat!</h1>
+    <h2>Yoshiki Nakamura</h2>
     <!-- <h3><a href="">link</a></h3> -->
     <div class="overlay">
-        <div class="desc">Kurebayashi Teru who is left alone after the passing of her beloved older brother Souichirou. Before he passed away, Souichirou gave Teru a handphone telling her that someone named “Daisy” would look after her and protect her no matter what.</div>
+        <div class="desc">Kyouko Mogami is in love with her childhood friend, Shoutarou Shou Fuwa, but the love is one-sided. She swears revenge on him after having him break her heart so badly. She wants to enter the industry and beat him at his own game.</div>
     </div>
 </div>
  
+<!-- FIVE --> 
+ 
+<div class="media rom comedy">
+    <img src="https://66.media.tumblr.com/4a2289ee076e0a712ab21f75ec64d871/ad52673be0efc24c-b3/s540x810/084b0490fe778282c93ef4b635fa1735a8c0ff03.jpg"/>
+    <h1>Fushigi Yuugi</h1>
+    <h2>Yuu Watase</h2>
+    <!-- <h3><a href="">link</a></h3> -->
+    <div class="overlay">
+        <div class="desc">Miaka Yuuki and Yui Hongo are two best friends planning on going to high school together. But one day, while visiting Tokyo's national library, the girls discover a strange and ancient Chinese book called "The Universe of the Four Gods." After opening the book, they're mysteriously transported into its world, a world much like a magical ancient China.</div>
+    </div>
+</div> 
 
+<!-- SIX --> 
+ 
+<div class="media rom comedy">
+    <img src="https://66.media.tumblr.com/1b083f0d6cbf597440be9856f62a99d4/ad52673be0efc24c-23/s540x810/f4a1de8546f2dd2de47ee996afa5cec329a5d078.jpg"/>
+    <h1>One Punch Man</h1>
+    <h2>ONE</h2>
+    <!-- <h3><a href="">link</a></h3> -->
+    <div class="overlay">
+        <div class="desc">Saitama is a superhero who can defeat any opponent with a single punch but seeks to find a worthy foe after growing bored by a lack of challenge in his fight against evil.</div>
+    </div>
+</div>
 
  
 </div><!-- end content -->
