@@ -1,0 +1,393 @@
+<!-----
+ 
+;; tags one ;;
+ 
+navigation page by longitud-de-onda
+ 
+TERMS OF USE:
+- do not remove the credit.
+- do not repost/redistribute.
+- do not take parts of the code and use it as your own.
+- do not use as a base code.
+ 
+COLORS:
+if you want to change the colors mess with the colors in the ::root section, there are further instructions there, including the code for the dark version.
+ 
+INSTRUCTIONS:
+if you like exactly how it looks and just want to fill it in with your links and such, scroll all the way down to where it says 'start editing content' here. if you want to mess with other parts of the code, there are some instructions littered in the css
+ 
+x camila
+ 
+----->
+ 
+ 
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+<head>
+ 
+<title>{Title} ✥ genre</title> <!--- edit what the page name looks like on the tab -->  
+ 
+<link rel="shortcut icon" href="https://66.media.tumblr.com/3b6ba339aacf843b40d49e1ecf079d2f/049e554b2e222b57-07/s250x400/de2e7e6303e828fb195f730482f1a5f9d3543985.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+ 
+<style type="text/css">
+ 
+/*
+to change color scheme, edit colors here
+it works best if you only change the accent colors
+and don't mess around too much with the others
+unless you know what you're doing*/
+ 
+:root {
+  --background: #efefef;
+  --white: #fff;
+  --text: #181923;
+  --blueaccent: #CCCCFF;
+  --pinkaccent: #FFCCCC;
+  --yellowaccent: #FFFFCC;
+  --cardglow: #d6d6d6;
+ 
+  --YELLOW: #ffc857  /*I added this var for yellow and replaced the colors to grey*/
+}
+ 
+/*comment out previous colors and uncomment this root for dark scheme
+ 
+ ORIGINAL COLORS
+  --blueaccent: #1b929f;
+  --pinkaccent: #db93b0;
+  --yellowaccent: #ffc857; */
+ 
+/*--- Dark Scheme*/
+/*:root {
+  --background: #181923;
+  --white: #000;
+  --text: #d1d1d1;
+  --blueaccent: #537A5A;
+  --pinkaccent: #582630;
+  --yellowaccent: #C17019;
+  --cardglow: #111111
+}  */
+
+/* below is a class I added for the title header -pau */
+
+p.headerr {
+  text-transform: uppercase;
+  font-family: 'Roboto Slab';
+  text-align:center;
+  font-size: 22px;
+  /* border-style: solid; */
+}
+ 
+body > iframe:first-child { display: none !important; }
+ 
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    border: 5px solid var(--white);
+    background-color: var(--background);
+   
+}
+ 
+::-webkit-scrollbar-thumb {
+   border: 2px solid var(--white);
+   border-radius: 7px;
+   background-color: var(--YELLOW);
+   /* change scrollbar color here */
+}
+ 
+ 
+body {
+    background: var(--white);
+}
+ 
+a {
+    color: var(--text);
+    text-decoration: none
+   
+}
+ 
+a:hover {
+    color: var(--text);
+}
+   
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:var(--white);
+    overflow: hidden;
+    padding-top: 30px;
+}
+ 
+.avatar {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+ 
+.vl {
+    width: calc(50% - 1px);
+    border-right: solid 2px var(--yellowaccent);
+    /* change vertical line color here*/
+    margin-bottom: 10px;
+}
+ 
+.navlink {
+    width: max-content;
+    margin: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+    color: var(--text);
+    font: 15px "Nunito", sans-serif;
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient(var(--white) 50%, var(--pinkaccent) 50%);
+    /* change what color the sidebar link highlights are by changing the word 'pinkaccent' to either another color name from the root menu or by completely removing var() and replacing with an html code*/
+    transition: background 500ms ease;
+    background-size: auto 200%;
+}
+ 
+.navlink:hover {
+  background-position-y: 100%;
+}
+ 
+.content {
+    height: 500px;
+    width: 840px;
+    margin: auto;
+}
+ 
+.card {
+    height: 190px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 var(--cardglow);
+    float: left;
+    overflow: hidden;
+}
+ 
+.upper {
+    height: 140px;
+    width: 250px;
+    position: relative;
+}
+ 
+.info {
+    height: 90px;
+    width: 200px;
+    background-color: var(--white);
+    position: absolute;
+    margin: 15px;
+    border-radius: 5px;
+    border: 10px var(--white) solid;
+    opacity:0;
+    transition-duration: 800ms;
+    overflow: auto;
+}
+ 
+.card:hover .info {opacity:1;}
+ 
+.ilink {
+    height: max-content;
+    padding: 3px 8px;
+    width: max-content;
+    max-width: 150px;
+    border-radius: 5px;
+    color: var(--text);
+    font: 15px "Nunito", sans-serif;
+    transition: 300ms;
+   
+}
+ 
+.ilink:nth-child(3n+3) {  
+  background-color: var(--pinkaccent);
+}
+ 
+.ilink:nth-child(3n+1) {  
+  background-color: var(--blueaccent);
+}
+ 
+.ilink:nth-child(3n+2) {  
+  background-color: var(--yellowaccent);
+}
+ 
+.ilink ~ .ilink { margin-top: 5px;}
+ 
+.lower {
+    height: 20px;
+    width: 220px;
+    background-color: var(--white);
+    padding: 15px;
+    text-align: center;
+    color: var(--text);
+    font: bold 15px "Nunito", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+ 
+.ilink::-webkit-scrollbar-track {
+    border: 5px solid var(--white);
+    background-color: var(--background);
+   
+}
+ 
+.ilink::-webkit-scrollbar-thumb {
+   border: 2px solid var(--white);
+   border-radius: 7px;
+   background-color: var(--blueaccent);
+}
+ 
+</style>
+</head>
+ 
+ 
+ 
+<!-- START EDITING CONTENT HERE -->
+ 
+<header>
+
+&nbsp; &nbsp;   <!-- add break/space -Pau -->
+
+<h1><p class="headerr"><a href="/">{Title}</a></p></h1>
+</header> 
+
+<hr style="width:50%;text-align:center;margin: auto">
+<!-- this is the divider -pau -->
+
+&nbsp; &nbsp; <!-- add break/space -Pau -->
+ 
+<body>
+
+<div class="main">
+<div class="content">
+ 
+<!--- copy and paste card code for as many categories as you need, they will line up in rows of 3, and scroll once there's more than nine --->
+       
+        <!--- ONE 'CARD' STARTS HERE --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/d7127b86e36694190dbb8e6d533c0f95/9e404ae6656539ce-bd/s640x960/582b09247dc71ca272cc2591c6f1a1be3584b895.jpg'); background-size: 250px auto;">
+        <div class="info">
+        
+<div class="ilink"><a href="/tagged/romance" target="_blank">romance</a></div>
+<div class="ilink"><a href="/tagged/lgbt" target="_blank">lgbt</a></div>
+<div class="ilink"><a href="/tagged/pg13ish" target="_blank">pg-13</a></div>
+<div class="ilink"><a href="/tagged/heartbreaks" target="_blank">heartbreaks</a></div>
+<div class="ilink"><a href="/tagged/retro%20fashion" target="_blank">period drama</a></div>  <!--- TODO: rename this tag --->
+        </div></div><div class="lower">Romance</div></div>
+        <!--- ENDS HERE --->
+       
+        <!--- TWO --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/cb176f2cce37c2202564ff7a40661c63/tumblr_inline_nlhluguEAw1rwsqmc_640.jpg'); background-size: 250px auto;">
+        <div class="info">
+        
+<div class="ilink"><a href="/tagged/heartwarming" target="_blank">heartwarming</a></div>
+<div class="ilink"><a href="/tagged/family" target="_blank">family</a></div>
+<div class="ilink"><a href="/tagged/tearjerker" target="_blank">tearjerker</a></div>
+<div class="ilink"><a href="/tagged/uplifting" target="_blank">uplifting</a></div>
+<div class="ilink"><a href="/tagged/young%20adult" target="_blank">young adult</a></div>
+<div class="ilink"><a href="/tagged/cute" target="_blank">cute</a></div>
+<div class="ilink"><a href="/tagged/musical" target="_blank">musical</a></div>
+        </div></div><div class="lower">Feel-Good</div></div>
+        <!--- ENDS HERE ---> 
+       
+        <!--- THREE --->
+        <div class="card"> 
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/8a2b301347b56014a64af3e2738e0f66/tumblr_inline_oe7zmcoBjV1rwsqmc_1280.jpg'); background-size: 250px auto;">
+        <div class="info">
+<div class="ilink"><a href="/tagged/action" target="_blank">action</a></div>
+<div class="ilink"><a href="/tagged/suspense" target="_blank">suspense</a></div>
+<div class="ilink"><a href="/tagged/cool" target="_blank">cool</a></div>
+<div class="ilink"><a href="/tagged/dark" target="_blank">dark</a></div>
+<div class="ilink"><a href="/tagged/scifi" target="_blank">science fiction</a></div>
+<div class="ilink"><a href="/tagged/thriller" target="_blank">thriller</a></div>
+<div class="ilink"><a href="/tagged/horror" target="_blank">horror</a></div>
+<div class="ilink"><a href="/tagged/artificial%20intelligence" target="_blank">ai</a></div>
+<div class="ilink"><a href="/tagged/crime" target="_blank">crime</a></div>
+        </div></div><div class="lower">Intense</div></div>
+        <!--- ENDS HERE --->
+        
+        <!--- FOUR --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/6629e776f960c99e03317ba14bec5fdd/tumblr_inline_nlht1lIco31rwsqmc_500.jpg'); background-size: 250px auto;">
+        <div class="info">
+            <div class="ilink"><a href="tagged/funny" target="_blank">funny</a></div>
+            <div class="ilink"><a href="/tagged/goddamn%20funny" target="_blank">goddamn funny</a></div>
+        </div></div><div class="lower">Funny</div></div>
+        <!--- ENDS HERE --->
+        
+        <!--- FIVE --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/760f1d89328b4a0e8354bc0d887862e5/tumblr_inline_ox2unlSTp41rwsqmc_640.jpg'); background-size: 250px auto;">
+        <div class="info"> 
+<div class="ilink"><a href="tagged/documentary" target="_blank">docu</a></div>
+<div class="ilink"><a href="tagged/biopic" target="_blank">biopic</a></div>
+<div class="ilink"><a href="tagged/real%20life" target="_blank">real life</a></div>
+<div class="ilink"><a href="tagged/historical" target="_blank">historical</a></div>
+<div class="ilink"><a href="tagged/oh%20life" target="_blank">slice of life</a></div>
+<div class="ilink"><a href="tagged/mental%20health" target="_blank">mental health</a></div>
+        </div></div><div class="lower">Real Life</div></div>
+        <!--- ENDS HERE --->
+        
+        <!--- SIX --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/3c0c566261e52ca089be3a6f98eeedb0/tumblr_inline_nldumppAHo1rwsqmc.jpg'); background-size: 250px auto;">
+        <div class="info">
+            <div class="ilink"><a href="tagged/j%20movie" target="_blank">japanese</a></div>
+            <div class="ilink"><a href="tagged/k%20movie" target="_blank">korean</a></div>
+            <div class="ilink"><a href="tagged/thai%20film" target="_blank">thai</a></div>
+            <div class="ilink"><a href="tagged/taiwanese" target="_blank">taiwanese</a></div>
+            <div class="ilink"><a href="tagged/pinoy%20film" target="_blank">pinoy</a></div>
+            <div class="ilink"><a href="tagged/bollywood" target="_blank">bollywood</a></div>
+            <div class="ilink"><a href="tagged/foreign%20language" target="_blank">foreign language</a></div>
+        </div></div><div class="lower">Origin</div></div>
+        <!--- ENDS HERE --->
+        
+        <!--- SEVEN --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/5eb244694280a1077252c456bdecf000/tumblr_inline_ou7ukkhtVA1rwsqmc_540.jpg'); background-size: 250px auto;">
+        <div class="info">
+            <div class="ilink"><a href="tagged/animated" target="_blank">film</a></div>
+            <div class="ilink"><a href="/anime" target="_blank">anime</a></div>
+            <div class="ilink"><a href="/manga" target="_blank">manga</a></div>
+        </div></div><div class="lower">Animated</div></div>
+        <!--- ENDS HERE --->
+         
+        <!--- EIGHT --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/0611c69c33f4f7548f505a770edd3d28/tumblr_inline_nlh85nYfIQ1rwsqmc_500.jpg'); background-size: 250px auto;">
+        <div class="info">
+            <div class="ilink"><a href="/tagged/thought%20provoking" target="_blank">thought-provoking</a></div>
+        </div></div><div class="lower">Thought-Provoking</div></div>
+        <!--- ENDS HERE --->
+       
+        <!--- NINE --->
+        <div class="card">
+        <div class="upper" style="background-image:url('https://66.media.tumblr.com/96ebff4ae6378b3aa0bed854d45363b8/14fea13fd3535456-c3/s500x750/05df533ea5fd67cd23f92b7450ee3e27df74628b.jpg'); background-size: 250px auto;">
+        <div class="info">
+            <div class="ilink"><a href="/series" target="_blank">series</a></div>
+            <div class="ilink"><a href="/kdrama" target="_blank">kdrama</a></div>
+        </div></div><div class="lower">Series</div></div>
+        <!--- ENDS HERE --->
+       
+    </div>
+   
+</div>
+<div style="font-family:'Nunito', sans-serif;position:fixed;bottom:15px;right:10px;font-size:14.5px;line-height:14px;height:14px;width:14px;padding:4px;"><a href="https://longitud-de-onda.tumblr.com" title="camila codes" style="color:#727F78;">C</a></div>
+</body>
+</html>
